@@ -1,4 +1,4 @@
-# AI Second Brain
+# BrainNote
 
 AI-powered knowledge base that scrapes, summarizes, organizes, and visualizes web content (articles, YouTube, PDFs/media) using Gemini AI. Features Chrome extension for capture, Next.js frontend with interactive knowledge graph, and robust Node.js backend with async queues.
 
@@ -7,7 +7,7 @@ AI-powered knowledge base that scrapes, summarizes, organizes, and visualizes we
 [![MongoDB](https://img.shields.io/badge/MongoDB-7-green)](https://mongodb.com)
 [![Gemini AI](https://img.shields.io/badge/Gemini-AI-orange)](https://ai.google.dev)
 
-## 🏗️ Architecture
+## Architecture
 
 ```mermaid
 graph TB
@@ -45,7 +45,7 @@ AI_Brain/
     └── popup.*
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Backend
 
@@ -71,15 +71,15 @@ npm run dev  # Runs on http://localhost:3000
 
 **Full Stack**: Run backend + frontend, load extension. Visit `localhost:3000` for graph UI.
 
-## ✨ Features
+## Features
 
-- 🔗 **Capture**: Chrome popup saves URLs/articles.
-- 🧠 **AI Processing**: Gemini 1.5 summarizes + generates embeddings.
-- 📱 **Scrape/Extract**: Puppeteer (stealth), Cheerio, YouTube captions, PDF/media parsing.
-- 💾 **Async Save**: BullMQ queues/workers prevent blocking.
-- 🔍 **Search/Feed**: Semantic search over saved items.
-- 📊 **Visualize**: Interactive knowledge graph (react-force-graph) in frontend.
-- 📤 **Upload**: Media/files directly.
+- **Capture**: Chrome popup saves URLs/articles.
+- **AI Processing**: Gemini 1.5 summarizes + generates embeddings.
+- **Scrape/Extract**: Puppeteer (stealth), Cheerio, YouTube captions, PDF/media parsing.
+- **Async Save**: BullMQ queues/workers prevent blocking.
+- **Search/Feed**: Semantic search over saved items.
+- **Visualize**: Interactive knowledge graph (react-force-graph) in frontend.
+- **Upload**: Media/files directly.
 
 ## API Endpoints
 
@@ -101,28 +101,8 @@ See backend/src/routes/\*.js for full docs.
 ## Environment Variables
 
 ```
-GEMINI_API_KEY=your_key
-MONGO_URI=mongodb://localhost:27017/aibrain
-REDIS_URL=redis://localhost:6379
-PORT=3001
+GEMINI_API_KEY
+MONGO_URL
+REDIS_URL
+PORT
 ```
-
-## Troubleshooting
-
-- **Server offline?** Verify Gemini key, Mongo/Redis running.
-- **Scraping blocked?** Puppeteer stealth handles most; fallback to basics.
-- **Graph empty?** Save items first via extension/API.
-- **CORS issues?** Allowed for localhost:3000.
-
-## Contributing
-
-1. Fork & PR.
-2. Run `npm install` in backend/frontend.
-3. Add tests (TODO).
-4. Follow existing style.
-
-## License
-
-MIT
-
-Built with ❤️ for personal knowledge management. Star/fork if useful!
