@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "AI Second Brain Saver",
+  "version": "1.0",
+  "description": "Instantly save the current page to your AI Knowledge Graph.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting", "storage", "identity"],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "*://*.googleusercontent.com/*",
+    "*://drive.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:3001/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
